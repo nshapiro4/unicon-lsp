@@ -3,8 +3,6 @@
  * Licensed under the MIT License. See License.txt in the project root for license information.
  * ------------------------------------------------------------------------------------------ */
 
-import * as cp from "child_process";
-import * as path from 'path';
 import { workspace, ExtensionContext } from 'vscode';
 
 import {
@@ -31,7 +29,7 @@ export function activate(context: ExtensionContext) {
 	// Options to control the language client
 	const clientOptions: LanguageClientOptions = {
 		// Register the server for plain text documents
-		documentSelector: [{ scheme: 'file', language: 'plaintext' }],
+		documentSelector: [{ scheme: 'file', language: 'icn' }],
 		synchronize: {
 			// Notify the server about file changes to '.clientrc files contained in the workspace
 			fileEvents: workspace.createFileSystemWatcher('**/.clientrc')

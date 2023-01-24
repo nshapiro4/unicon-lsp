@@ -1,10 +1,19 @@
 {
 	"name": "unicon-lsp",
+	"displayName": "Unicon Helper",
 	"description": "Unicon Programming Language LSP",
 	"author": "Unicon LSP Team",
 	"license": "MIT",
 	"version": "0.5.0",
 	"publisher": "jafar",
+	"keywords" : [
+		"Unicon",
+		"Icon",
+		"SNOBOL"
+	],
+	"categories": [
+        "Programming Languages"
+    ],
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/HereBeCode/unicon-lsp"

@@ -4,13 +4,13 @@
 	"description": "Unicon Programming Language LSP",
 	"author": "Unicon LSP Team",
 	"license": "MIT",
-	"version": "0.5.0",
+	"version": "0.6.0",
 	"publisher": "jafar",
 	"contributes" : {
 		"languages": [{
 			"id" : "unicon",
 			"extensions" : [ ".icn" ],
-			"aliases" : [ "Unicon", "unicon" ]
+			"aliases" : [ "Unicon", "unicon", "icon" ]
 		}] 
 	},
 	"activationEvents": [

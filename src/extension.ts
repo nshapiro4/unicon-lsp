@@ -19,7 +19,7 @@ let client: LanguageClient;
 export function activate(context: ExtensionContext) {
 	const transport: SocketTransport = { kind: TransportKind.socket, port: 7979 };
 	// const options: ExecutableOptions = { detached: true, shell: true };
-	const unicon: Executable = { command: 'ulsp', transport: transport };
+	const unicon: Executable = { command: 'ulsp', transport: transport, args: ["-c"] };
 	const serverOptions: ServerOptions = {
 		run: unicon,
 		debug: unicon

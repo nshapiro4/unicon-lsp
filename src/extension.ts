@@ -312,13 +312,17 @@ function correctUniconRoot(lsifFilePath: string): string {
 // Function to start LSP with a timer.
 async function startLSP(logLevel = 7) {
     lspStartUp = false;
+    const vscodePid = process.pid.toString();
+    lsifChannel.appendLine(`[Config] Detected VS Code PID: ${vscodePid}`);
     const transport: SocketTransport = { kind: TransportKind.socket, port: 7979 };
 	// const options: ExecutableOptions = { detached: true, shell: true };
-	const unicon: Executable = { command: 'ulsp', transport: transport, args: ["-c", "--loglevel", logLevel.toString()] };
+	const unicon: Executable = { command: 'ulsp', transport: transport, args: ["-c", "--loglevel", logLevel.toString(), "--clientProcessId", vscodePid] };
 	const serverOptions: ServerOptions = {
 	    run: unicon,
 	    debug: unicon
 	};
+    const args = ["-c", "--loglevel", logLevel.toString(), "--clientProcessId", vscodePid];
+    //lsifChannel.appendLine(`[Config] LSP Launch Args: ${args.join(" ")}`);
 
 
 	// Options to control the language client

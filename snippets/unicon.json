@@ -1,0 +1,142 @@
+{
+	"Procedure Template": {
+		"prefix": "pro",
+		"body": [
+			"procedure ${1:name}(${2:args})",
+			"\tlocal ${3:variables}",
+			"\t${0:# your code here}",
+			"end",
+			""
+		],
+		"description": "Create a procedure"
+	},
+	"Main Procedure": {
+		"prefix": "main",
+		"body": [
+			"procedure main()",
+			"\tlocal ${1:variables}",
+			"\t${0:# your code here}",
+			"end",
+			""
+		],
+		"description": "Create a main procedure"
+	},
+	"Class Template": {
+		"prefix": "cla",
+		"body": [
+			"class ${1:className}(${2:args})",
+			"\tmethod ${5:methodName}(${6:args})",
+			"\t\tlocal ${7:variables}",
+			"\t\t${0:# your code here}",
+			"\tend",
+			"",
+			"\tinitially(${3:variables})",
+			"\t\t${4:# your code here}",
+			"end",
+			""
+		],
+		"description": "Create a class"
+	},
+	"Method Template": {
+		"prefix": "met",
+		"body": [
+			"method ${1:name}(${2:args})",
+			"\tlocal ${3:variables}",
+			"\t${0:# your code here}",
+			"end",
+			""
+		],
+		"description": "Create a method for a class"
+	},
+	"Write Statement": {
+		"prefix": "wri",
+		"body": [
+			"write(${0:message})"
+		],
+		"description": "Create a write statement"
+	},
+	"While Loop": {
+		"prefix": "whi",
+		"body": [
+			"while ${1:condition} do {",
+			"\t${0:# your code here}",
+			"}"
+		],
+		"description": "Create a while loop"
+	},
+	"If Statement": {
+		"prefix": "if",
+		"body": [
+			"if ${1:condition} then {",
+			"\t${0:# your code here}",
+			"}"
+		],
+		"description": "Create an if statement"
+	},
+	"If-Else Statement": {
+		"prefix": "ife",
+		"body": [
+			"if ${1:condition} then {",
+			"\t${2:# if true}",
+			"} else {",
+			"\t${3:# if false}",
+			"}"
+		],
+		"description": "Create an if-else statement"
+	},
+	"Every Loop": {
+		"prefix": "eve",
+		"body": [
+			"every ${1:var} := ${2:!list} do {",
+			"\t${0:# loop body}",
+			"}"
+		],
+		"description": "Create an every loop"
+	},
+	"Repeat Loop": {
+		"prefix": "rep",
+		"body": [
+			"repeat {",
+			"\t${1:# your code here}",
+			"\tif ${2:condition} then break",
+			"}"
+		],
+		"description": "Create a repeat loop"
+	},
+	"Case Statement": {
+		"prefix": "cas",
+		"body": [
+			"case ${1:expression} of {",
+			"\t${2:value1}: ${3:# code1}",
+			"\t${4:value2}: ${5:# code2}",
+			"\tdefault: ${6:# default code}",
+			"}"
+		],
+		"description": "Create a case statement"
+	},
+	"Suspend Statement": {
+		"prefix": "sus",
+		"body": [
+			"suspend ${1:expression1} do {",
+			"\t${0:expression2}",
+			"}"
+		],
+		"description": "Create a suspend statement"
+	},
+	"Until Statement": {
+		"prefix": "unt",
+		"body": [
+			"until ${1:expression1} do {",
+			"\t${0:expression2}",
+			"}"
+		],
+		"description": "Create an until statement"
+	},
+	"critical Statement": {
+		"prefix": "cri",
+		"body": [
+			"critical ${1:expression1} do ${0:expression2}"
+		],
+		"description": "Create a critical statement"
+	}
+}
